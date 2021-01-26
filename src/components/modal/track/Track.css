@@ -1,0 +1,26 @@
+.track {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+.track input {
+  flex-grow: 1;
+  margin: 0 16px;
+  padding: 4px 6px;
+}
+.number {
+  width: 20px;
+  text-align: center;
+}
+.track-list-add-input {
+  flex-grow: 1;
+  width: 100%;
+  padding-left: 8px;
+  color: #212121;
+  font-size: 18px;
+  height: 38px;
+  outline: none;
+  border: none;
+}

@@ -1,0 +1,14 @@
+.merch {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+}
+.merch-items {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}

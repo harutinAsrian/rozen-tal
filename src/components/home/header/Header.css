@@ -1,0 +1,140 @@
+.nav-links {
+  color: #ececec;
+  display: flex;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.nav-links li {
+  margin-right: 24px;
+  list-style: none;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 12vh;
+}
+
+.dark {
+  filter: invert(100%);
+}
+
+li:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.6s ease 0s, left 0.6s ease 0s;
+  width: 0;
+}
+li:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 40px;
+  height: 4px;
+  background-color: #ececec;
+  margin: 8px;
+}
+@media screen and (max-width: 992px) {
+  .header {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-links {
+    position: fixed;
+    left: 0%;
+    top: 12vh;
+    background: rgba(32, 32, 32, 1);
+    height: 88vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(-120%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+  }
+  .nav-links li {
+    font-size: 42px;
+    font-weight: medium;
+  }
+  .burger {
+    display: block;
+  }
+  .lock {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 575px) {
+  .burger div {
+    width: 30px;
+    height: 2px;
+    background-color: #ececec;
+    margin: 6px;
+  }
+
+  .nav-links li {
+    font-size: 32px;
+    font-weight: medium;
+  }
+}
+.nav-item-fade li {
+  animation: navLinkFade 1s ease-in;
+}
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  0% {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.cart {
+  display: flex;
+  border-radius: 5px;
+  padding: 6px 8px 4px;
+  color: #f5e2e2;
+  position: relative;
+  padding-right: 50px;
+  cursor: pointer;
+}
+.cart-quantity {
+  margin-left: 15px;
+  position: absolute;
+  top: 0;
+  right: 22px;
+  border-radius: 5px;
+  font-size: 22px;
+  color: #f5e2e2;
+}

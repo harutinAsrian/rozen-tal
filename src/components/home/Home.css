@@ -1,0 +1,11 @@
+.home {
+  height: 100vh;
+  margin: 0 auto;
+  background: url("../../img/bg.jpg") center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
